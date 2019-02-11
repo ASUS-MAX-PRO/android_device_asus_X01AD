@@ -180,6 +180,7 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 
 # Inherit from the proprietary version
 -include vendor/asus/X01AD/BoardConfigVendor.mk
