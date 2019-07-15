@@ -93,6 +93,9 @@ vendor.bluetooth.soc=pronto
 ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 
+# Charger
+ro.charger.enable_suspend=true
+
 #
 # System props for telephony
 # System prop to turn on CdmaLTEPhone always
