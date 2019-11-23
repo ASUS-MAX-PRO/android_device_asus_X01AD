@@ -86,6 +86,12 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Radio
 persist.vendor.radio.procedure_bytes=SKIP
 
+# Radio - IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Shutdown time
 sys.vendor.shutdown.waittime=500
 
