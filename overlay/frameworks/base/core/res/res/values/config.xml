@@ -74,8 +74,11 @@
     <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
      <bool name="config_eap_sim_based_auth_supported">true</bool>
 
-    <!--  Whether Multiuser UI should be shown -->
-     <bool name="config_enableMultiUserUI">false</bool>
+     <!--  Maximum number of supported users -->
+     <integer name="config_multiuserMaximumUsers">4</integer>
+
+     <!--  Whether Multiuser UI should be shown -->
+     <bool name="config_enableMultiUserUI">true</bool>
 
      <!-- Whether device ignores the RSSNR signal implementation -->
      <bool name="config_ignoreRssnrSignalLevel">true</bool>
