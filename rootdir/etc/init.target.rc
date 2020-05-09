@@ -212,6 +212,7 @@ on charger
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
     start vendor.hvdcp_opti
+    start vendor.power_off_alarm
 
 service dts_configurator /system/vendor/bin/dts_configurator
     class late_start
