@@ -132,6 +132,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
+TARGET_HAS_NO_POWER_STATS := true
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
