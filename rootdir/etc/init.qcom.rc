@@ -496,12 +496,6 @@ service vendor.tftp_server /vendor/bin/tftp_server
    user root
    writepid /dev/cpuset/system-background/tasks
 
-service vendor.sensors /vendor/bin/sscrpcd sensorspd
-    class early_hal
-    user system
-    group system wakelock
-    capabilities BLOCK_SUSPEND
-
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
