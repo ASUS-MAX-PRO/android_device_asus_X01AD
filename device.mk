@@ -256,6 +256,8 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxSwVencHevc \
+    libOmxVdec \
+    libOmxVenc \
     libstagefrighthw
 
 # Permissions
