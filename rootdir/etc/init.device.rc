@@ -44,6 +44,10 @@ on boot
     chmod 666 /dev/fpsdev0
     chmod 666 /dev/focaltech_fp
 
+    # Tap to wake node
+    chown system system /proc/tpd_gesture
+    chmod 0660 /proc/tpd_gesture
+
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
 
