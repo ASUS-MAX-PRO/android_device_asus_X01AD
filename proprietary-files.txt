@@ -2037,19 +2037,6 @@ lib64/libfm-hci.so|589e9e290acfa18a49deba33606ed158d5e7f898
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|5da074c88802633f64e2b9fe2013e2271f707e7b
 vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d27a7a6cea72a48739e741e749bff2e194d4510
 
-# Factory
-product/framework/vendor.qti.hardware.factory-V1.0-java.jar
-product/framework/vendor.qti.hardware.factory-V1.1-java.jar
-product/lib/vendor.qti.hardware.factory@1.0.so
-product/lib/vendor.qti.hardware.factory@1.1.so
-product/lib64/vendor.qti.hardware.factory@1.0.so
-product/lib64/vendor.qti.hardware.factory@1.1.so
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
-vendor/etc/permissions/vendor.qti.hardware.factory.xml
-vendor/lib64/vendor.qti.hardware.factory@1.0.so
-vendor/lib64/vendor.qti.hardware.factory@1.1.so
-
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
@@ -2694,15 +2681,6 @@ vendor/lib64/sensor_calibrate.so
 # Sensor - from daisy-user-10-QKQ1.191002.002-V11.0.10.0.QDLMIXM-release-keys
 vendor/lib/sensors.ssc.so|302e5aee38e1296dfba32b681681492d5070f509
 vendor/lib64/sensors.ssc.so|9affbc5130223a63c7c8ee33a1b7408d739e1466
-
-# SSR
-vendor/bin/ssr_diag
-vendor/bin/ssr_setup
-vendor/bin/subsystem_ramdump
-vendor/lib/libSubSystemShutdown.so
-vendor/lib/libsubsystem_control.so
-vendor/lib64/libSubSystemShutdown.so
-vendor/lib64/libsubsystem_control.so
 
 # Soter
 product/framework/vendor.qti.hardware.soter-V1.0-java.jar
