@@ -231,7 +231,8 @@
      <bool name="skip_restoring_network_selection">true</bool>
 
     <!-- Height of the status bar -->
-     <dimen name="status_bar_height_portrait">57.0px</dimen>
+     <dimen name="status_bar_height_portrait">81px</dimen>
+     <dimen name="status_bar_height_landscape">81px</dimen>
 
     <!-- The maximum range of gamma adjustment possible using the screen
          auto-brightness adjustment setting. -->
