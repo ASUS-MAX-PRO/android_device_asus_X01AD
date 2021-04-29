@@ -8,6 +8,7 @@ persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.fluence.speaker=false
 persist.vendor.audio.hw.binder.size_kbyte=1024
 persist.vendor.audio.speaker.prot.enable=false
+ro.af.client_heap_size_kbyte=7168
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.dolby.ds2.enabled=false
@@ -49,7 +50,12 @@ debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
 
 # Display
+debug.sf.enable_hwc_vds=1
+debug.sf.hw=0
+persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196610
+ro.qualcomm.cabl=2
+ro.vendor.display.cabl=2
 
 # DRM
 drm.service.enabled=true
@@ -60,32 +66,17 @@ ro.control_privapp_permissions=log
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 
-# GMS
-ro.com.google.rlzbrandcode=ASUP
-ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
-
 # NFC
 ro.hardware.nfc_nci=nqx.default
-
-# NTP Server
-persist.backup.ntpServer=0.pool.ntp.org
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
-# Qualcomm System Daemon
-persist.vendor.qcomsysd.enabled=1
-
 # Radio
-persist.radio.multisim.config=dsds
-persist.vendor.radio.apm_sim_not_pwdn=1
-persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.procedure_bytes=SKIP
-persist.vendor.radio.rat_on=combine
-persist.vendor.radio.sib16_support=1
-rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
-ro.telephony.iwlan_operation_mode=legacy
-vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 # Shutdown time
 sys.vendor.shutdown.waittime=500
+
+# UBWC
+vendor.video.disable.ubwc=1
