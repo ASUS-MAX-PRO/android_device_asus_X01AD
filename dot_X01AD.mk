@@ -13,14 +13,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common DotOS stuff.
+$(call inherit-product, vendor/dot/config/common.mk)
 
 # Inherit device stuff
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := dot_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max M2
@@ -38,3 +38,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "asus/WW_X01AD/ASUS_X01A_1:10/WW_Phone-202005071625/17.2018.2004.31-20200507:user/release-keys"	
+
+# Set BootAnimation Resolution
+TARGET_BOOT_ANIMATION_RES := 720
+WITH_GAPPS := true
