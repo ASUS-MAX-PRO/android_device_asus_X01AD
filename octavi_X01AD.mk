@@ -13,14 +13,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common OctaviOs stuff.
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
+
+# Boot animation
+TARGET_BOOT_ANIMATION_RES := 720
 
 # Inherit device stuff
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Device identifiers.
-PRODUCT_NAME := lineage_X01AD
+PRODUCT_NAME := octavi_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone Max M2
@@ -38,3 +41,13 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
 BUILD_FINGERPRINT := "asus/WW_X01AD/ASUS_X01A_1:10/WW_Phone-202005071625/17.2018.2004.31-20200507:user/release-keys"	
+
+# OctaviOS
+OCTAVI_BUILD_DATE := $(shell date +"%Y%m%d-%H%M%S")
+TARGET_FACE_UNLOCK_SUPPORTED := true
+OCTAVI_DEVICE_MAINTAINER := Nguyenhung9x
+OCTAVI_BUILD_TYPE := Unofficial
+
+# GApps
+WITH_GAPPS := true
+TARGET_ARCH := arm64
