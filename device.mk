@@ -368,8 +368,9 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
-    
+    $(LOCAL_PATH) \
+    hardware/qcom-caf/$(YOUR_HW_PLATFORM)
+
 # Shims
 PRODUCT_PACKAGES += \
     libshim_dpmframework
@@ -429,3 +430,15 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/asus/X01AD/X01AD-vendor.mk)
+
+## why need this bru
+YOUR_HW_PLATFORM := msm8996
+
+# hardware
+PRODUCT_BOARD_PLATFORM := $(YOUR_HW_PLATFORM)
+PRODUCT_USES_QCOM_HARDWARE := true
+
+# hals
+SRC_AUDIO_HAL_DIR := hardware/qcom-caf/$(YOUR_HW_PLATFORM)/audio
+SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/$(YOUR_HW_PLATFORM)/display
+SRC_MEDIA_HAL_DIR := hardware/qcom-caf/$(YOUR_HW_PLATFORM)/media
