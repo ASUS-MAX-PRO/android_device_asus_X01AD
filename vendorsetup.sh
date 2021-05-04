@@ -8,3 +8,5 @@ git clone https://github.com/LineageOS/android_hardware_qcom_media -b lineage-18
 git clone https://github.com/LineageOS/android_hardware_qcom_audio -b lineage-18.1-caf-msm8996 hardware/qcom-caf/msm8996/audio
 rm -rf vendor/qcom/opensource/data-ipa-cfg-mgr
 git clone https://github.com/LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr.git -b lineage-18.1 vendor/qcom/opensource/data-ipa-cfg-mgr
+rm -rf hardware/qcom-caf/wlan
+git clone https://github.com/LineageOS/android_hardware_qcom_wlan -b lineage-18.1-caf hardware/qcom-caf/wlan
