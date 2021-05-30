@@ -116,7 +116,7 @@ BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 TARGET_KERNEL_SOURCE := kernel/asus/X01AD
 TARGET_KERNEL_CONFIG := X01AD_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_VERSION := 4.9
 
 # Partitions
@@ -130,6 +130,7 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 838860800
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 
 # Power
+TARGET_HAS_NO_WLAN_STATS := true
 TARGET_TAP_TO_WAKE_NODE := "/proc/tpd_gesture"
 
 # Properties
@@ -155,6 +156,10 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Sepolicy
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Treble
 BOARD_VNDK_VERSION := current
@@ -177,6 +182,7 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 
 # Inherit from the proprietary version
 -include vendor/asus/X01AD/BoardConfigVendor.mk

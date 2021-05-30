@@ -71,6 +71,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 ro.com.google.rlzbrandcode=ASUP
 ro.com.google.rlz_ap_whitelist=y0,y5,y6,y7,y9
 
+# Graphics
+ro.hardware.egl=adreno
+ro.hardware.vulkan=adreno
+
 # GPU
 debug.sf.early_phase_offset_ns=1500000
 debug.sf.early_app_phase_offset_ns=1500000
@@ -86,12 +90,23 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Radio
 persist.vendor.radio.procedure_bytes=SKIP
 
+# Radio - IMS
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+persist.dbg.wfc_avail_ovr=1
+
 # Shutdown time
 sys.vendor.shutdown.waittime=500
 
 # SurfaceFlinger
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_virtual_display_dimension=4096
+
+# ZRAM
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
 
 # UBWC
 vendor.video.disable.ubwc=1

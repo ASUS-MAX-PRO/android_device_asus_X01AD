@@ -44,6 +44,7 @@ on fs
 
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/alarm 0770 system system
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/bms 0700 root system
     restorecon_recursive /mnt/vendor/persist
@@ -202,6 +203,9 @@ on property:init.svc.zygote=running
 on property:init.svc.zygote=restarting
     stop ppd
 
+on property:sys.boot_completed=1
+    setprop sys.io.scheduler "bfq"
+
 on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
@@ -209,6 +213,7 @@ on charger
     start qcom-post-boot
     setprop persist.sys.usb.config mass_storage
     start vendor.hvdcp_opti
+    start vendor.power_off_alarm
 
 service dts_configurator /system/vendor/bin/dts_configurator
     class late_start
@@ -258,6 +263,20 @@ service energy-awareness /system/vendor/bin/energy-awareness
     group system
     oneshot
 
+on boot
+    chown system system /sys/class/leds/red/blink
+    chown system system /sys/class/leds/red/breath
+    chown system system /sys/class/leds/red/delay_on
+    chown system system /sys/class/leds/red/delay_off
+    chown system system /sys/class/leds/green/blink
+    chown system system /sys/class/leds/green/breath
+    chown system system /sys/class/leds/green/delay_on
+    chown system system /sys/class/leds/green/delay_off
+    chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/blue/breath
+    chown system system /sys/class/leds/blue/delay_on
+    chown system system /sys/class/leds/blue/delay_off
+    
 on boot
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
