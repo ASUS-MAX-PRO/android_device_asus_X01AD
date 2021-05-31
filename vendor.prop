@@ -84,6 +84,9 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 # NFC
 ro.hardware.nfc_nci=nqx.default
 
+# NTP Server
+persist.backup.ntpServer=0.pool.ntp.org
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
