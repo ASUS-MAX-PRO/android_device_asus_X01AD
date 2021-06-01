@@ -267,9 +267,6 @@
      <integer name="config_brightness_ramp_rate_slow">60</integer>
      <integer name="config_longPressOnHomeBehavior">0</integer>
 
-    <!--  Maximum number of supported users -->
-     <integer name="config_multiuserMaximumUsers">1</integer>
-
     <!-- Default value for led color when battery is fully charged -->
      <integer name="config_notificationsBatteryFullARGB">0xFF001400</integer>
 
