@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
     libgui_vendor
 
 PRODUCT_PACKAGES += \
-    Snap
+    Camera2
 
 # CNE
 PRODUCT_PACKAGES += \
