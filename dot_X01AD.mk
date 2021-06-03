@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/asus/X01AD
+DOT_BUILD_TYPE := OFFICIAL
 
 # Inherit from source
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
